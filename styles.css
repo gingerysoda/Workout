@@ -358,3 +358,10 @@ small { font-size: 0.6em; color: var(--muted); }
 
 .set-row.is-pr .set-label { color: var(--gold-text); }
 .check.on.pr { background: var(--gold); border-color: var(--gold); color: #17150E; }
+
+.reorder-row { display: flex; align-items: center; gap: 8px; padding: 6px 6px 6px 14px; }
+.reorder-row.cur { background: var(--raised); }
+.reorder-row .row-main { min-width: 0; }
+.reorder-no { font-family: var(--mono); font-size: 13px; color: var(--muted); width: 22px; }
+.reorder-row .icon-btn { border: 1px solid var(--line); color: var(--ivory); }
+.reorder-row .icon-btn:disabled { opacity: 0.25; }
