@@ -1,6 +1,6 @@
 /* Service worker: precaches the app so it opens with no signal, and caches
    exercise images and fonts the first time they load. */
-const VERSION = 'bdbd90b291';
+const VERSION = 'c054ceaa0b';
 const APP = 'app-' + VERSION;
 const RUNTIME = 'runtime-v1';
 const FILES = ["./", "./README.txt", "./icons/apple-touch-icon.png", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./index.html", "./main.js", "./manifest.webmanifest", "./styles.css"];
