@@ -357,3 +357,12 @@ small { font-size: 0.6em; color: var(--muted); }
 .sheet-ridge { border-radius: 12px; overflow: hidden; margin: 0; flex-shrink: 0; }
 .sheet-ridge .ridge { height: 150px; }
 .sheet-body > *, .page > * { flex-shrink: 0; }
+
+/* iOS home-screen apps with a full-screen status bar size fixed elements as if the status bar
+   still took space, leaving a strip under the tab bar as tall as the status bar. In standalone
+   mode 100vh is the true screen height, so size the app by that instead of top/bottom. */
+@media (display-mode: standalone) {
+  html, body { height: 100vh; }
+  .app { bottom: auto; height: 100vh; }
+}
+.hero > .scene { left: -1px; width: calc(100% + 2px); }
