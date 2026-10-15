@@ -366,3 +366,29 @@ small { font-size: 0.6em; color: var(--muted); }
   .app { bottom: auto; height: 100vh; }
 }
 .hero > .scene { left: -1px; width: calc(100% + 2px); }
+
+/* Plate loader */
+.plates { background: var(--surface); border: 1px solid var(--rule); border-radius: 14px; padding: 8px 10px 10px; }
+.plates svg { display: block; }
+.plates.animate .plate { animation: plate-in 0.35s cubic-bezier(0.2, 0.8, 0.3, 1) both; transform-box: fill-box; }
+.plate-num { font-family: var(--mono); font-size: 10px; fill: var(--muted); }
+.plates-words { font-family: var(--mono); font-size: 10.5px; color: var(--cyan); margin-top: 3px; letter-spacing: 0.03em; }
+.plates-cap { display: flex; justify-content: space-between; gap: 8px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em; color: var(--muted); }
+.plates-cap span:first-child { color: var(--text); }
+@keyframes plate-in { from { transform: translateX(160px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .plates.animate .plate { animation: none; } }
+
+/* Your Workouts: month calendar */
+.month-cal { gap: 10px; }
+.mc-sum { display: flex; gap: 16px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--muted); }
+.mc-sum b { font-size: 15px; font-weight: 500; color: var(--text); margin-right: 4px; }
+.mc-sum .pr-text b { color: var(--pr); }
+.mc-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+.mc-dow { font-family: var(--mono); font-size: 10px; color: var(--dim); text-align: center; text-transform: uppercase; padding-bottom: 2px; }
+.mc-day { position: relative; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-family: var(--mono); font-size: 14px; color: var(--muted); border: 1px solid transparent; background: none; padding: 0; min-height: 40px; }
+.mc-day.blank { visibility: hidden; }
+.mc-day.future { color: var(--dim); opacity: 0.55; }
+.mc-day.today { border-color: var(--line); color: var(--text); }
+.mc-day.trained { background: var(--cyan-soft); border-color: var(--cyan-line); color: var(--text); font-weight: 700; }
+.mc-day.trained.rec::after { content: ''; position: absolute; top: 5px; right: 5px; width: 6px; height: 6px; border-radius: 50%; background: var(--pr); }
+.mc-two { position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%); width: 12px; height: 2px; border-radius: 1px; background: var(--cyan); }
